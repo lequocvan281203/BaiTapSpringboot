@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 import vn.iostar.Entity.CategoryEntity;
 import vn.iostar.Repository.CategoryRepository;
 import vn.iostar.Service.ICategoryService;
-import org.springframework.data.domain.Sort;
 
 
 @Service
@@ -54,10 +53,10 @@ public class CategoryServiceImpl implements ICategoryService {
         return categoryRepository.findAll(pageable);
     }
 
-    @Override
-    public List<CategoryEntity> findAll(Sort sort) {
-        return categoryRepository.findAll(sort);
-    }
+//    @Override
+//    public List<CategoryEntity> findAll(Sort sort) {
+//        return categoryRepository.findAll(sort);
+//    }
 
     @Override
     public List<CategoryEntity> findAllById(Iterable<Long> ids) {
